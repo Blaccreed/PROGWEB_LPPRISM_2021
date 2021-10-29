@@ -35,11 +35,11 @@ class Voiture {
 		$requete = "SELECT * FROM voiture";
 		$reponse = Connexion::pdo() ->query($requete);
 		$reponse -> setFetchMode(PDO::FETCH_CLASS, 'Voiture');
-        $tab = $reponse ->fetchAll();
+		$tab = $reponse ->fetchAll();
 		return $tab;
 	}
 
-  public static function GetVoitureByImmat($immat)
+	public static function GetVoitureByImmat($immat)
 	{
 		$requetePreparee = "SELECT* FROM voiture WHERE immatriculation = :tag_immatriculation;";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
@@ -47,10 +47,10 @@ class Voiture {
 		$arrayName = array("tag_immatriculation" => $immat);
 
 		try {
-		  $req_prep->execute($arrayName);
+			$req_prep->execute($arrayName);
 			$req_prep -> setFetchMode(PDO::FETCH_CLASS, 'Voiture');
 		} catch (PDOException $e) {
-		       echo "erreur: ".$e ->getMessage()."</br>";
+			echo "erreur: ".$e ->getMessage()."</br>";
 		}
 
 		$result = $req_prep->fetchAll();
@@ -65,13 +65,31 @@ class Voiture {
 		$arrayName = array("tag_immatriculation" => $immat);
 
 		try {
-		  $req_prep->execute($arrayName);
+			$req_prep->execute($arrayName);
 		} catch (PDOException $e) {
-		       echo "erreur: ".$e ->getMessage()."</br>";
+			echo "erreur: ".$e ->getMessage()."</br>";
 		}
-     
+	}
+
+	public static function addVoiture($immat, $marque, $couleur)
+	{
+		$requetePreparee = "INSERT INTO voiture VALUES(:tag_immatriculation, :tag_marque,:tag_couleur);";
+
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+
+		$arrayName = array("tag_immatriculation" => $immat,
+	                     	"tag_marque" => $marque,
+		                    "tag_couleur" => $couleur);
+
+		try {
+			$req_prep->execute($arrayName);
+		} catch (PDOException $e) {
+			echo "erreur: ".$e ->getMessage()."</br>";
+		}
 
 	}
+
+
 
 }
 ?>
