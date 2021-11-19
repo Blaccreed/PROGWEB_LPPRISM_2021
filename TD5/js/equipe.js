@@ -20,8 +20,9 @@ class Equipe {
 		document.write("evaluation:" + " " + this.eval + "points:" + " " + this.pts )
 	}
 
-	mise_a_jour(bp,bc) {
-		// à compléter
+	mise_a_jour(un_bp,un_bc) {
+		this.bp = un_bp;
+		this.bc = un_bc;
 	}
 
 }
