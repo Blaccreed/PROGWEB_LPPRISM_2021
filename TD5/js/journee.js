@@ -10,6 +10,9 @@ class Journee {
 
 		afficher() {
 			document.querySelector('#match1').innerHTML = this.match1.affichage();
+			document.querySelector('#match2').innerHTML = this.match2.affichage();
+			document.querySelector('#match3').innerHTML = this.match3.affichage();
+			document.querySelector('#match4').innerHTML = this.match4.affichage();
 		}
 
 		jouer() {
