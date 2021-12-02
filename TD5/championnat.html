@@ -53,6 +53,7 @@
   </div>
   <script type="text/javascript" src="js/equipe.js"></script>
   <script type="text/javascript" src="js/match.js"></script>
+  <script type="text/javascript" src="js/journee.js"></script>
   <script>
     let eq1 = new Equipe("PSG");
     eq1.G = 6;
@@ -69,6 +70,60 @@
     eq2.bc = 10;
     eq2.bp = 15;
     eq2.pts = 23;
+
+    let eq3 = new Equipe("FCN");
+    eq3.G = 4;
+    eq3.N = 0;
+    eq3.P = 1;
+    eq3.bc = 5;
+    eq3.bp = 10;
+    eq3.pts = 12;
+
+    let eq4 = new Equipe("ASM");
+    eq4.G = 5;
+    eq4.N = 2;
+    eq4.P = 2;
+    eq4.bc = 1;
+    eq4.bp = 7;
+    eq4.pts = 15;
+
+    let eq5 = new Equipe("EAG");
+    eq5.G = 1;
+    eq5.N = 0;
+    eq5.P = 3;
+    eq5.bc = 15;
+    eq5.bp = 5;
+    eq5.pts = 3;
+
+    let eq6 = new Equipe("OL");
+    eq6.G = 7;
+    eq6.N = 4;
+    eq6.P = 1;
+    eq6.bc = 10;
+    eq6.bp = 15;
+    eq6.pts = 25;
+
+    let eq7 = new Equipe("OL");
+    eq7.G = 5;
+    eq7.N = 2;
+    eq7.P = 1;
+    eq7.bc = 10;
+    eq7.bp = 15;
+    eq7.pts = 17;
+
+    let eq8 = new Equipe("MHSC");
+    eq7.G = 6;
+    eq7.N = 3;
+    eq7.P = 0;
+    eq7.bc = 10;
+    eq7.bp = 15;
+    eq7.pts = 21;
+
+    let match1 = new Match(eq1, eq2);
+    let match2 = new Match(eq3, eq4);
+    let match3 = new Match(eq5, eq6);
+    let match4 = new Match(eq7, eq8);
+
   </script>
 </body>
 

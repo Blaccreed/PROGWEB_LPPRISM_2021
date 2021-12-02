@@ -25,4 +25,5 @@ class Equipe {
 		this.bc = un_bc;
 	}
 
+
 }

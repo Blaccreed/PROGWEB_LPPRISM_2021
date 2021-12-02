@@ -9,7 +9,7 @@ class Match {
 	}
 
 	jouer() {
-		this.res1 = Math.floor(Math.random()*5 * 0.5 )  ;
+		this.res1 = Math.floor(Math.random()* 5 * 1.5 )  ;
 		this.res2 = Math.floor(Math.random()*5);
     this.played = true;
 	}
@@ -20,7 +20,7 @@ class Match {
 	}
 
 	affichage() {
-		console.log(eq1.nom + " " + this.res1 + " " + "-" + " " + this.res2 + " " + eq2.nom );
+		return this.eq1.nom + " " + this.res1 + " " + "-" + " " + this.res2 + " " + this.eq2.nom;
 	}
 
 }
