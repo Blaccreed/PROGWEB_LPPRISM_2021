@@ -1,15 +1,15 @@
 class Equipe {
 
-	constructor(nom, cla, pts, gg, p, n, bp, bc, evaluation  ) {
+	constructor(nom, clt, pts, G, N, P, bp, bc, une_eval) {
 		this.nom = nom;
-		this.cla = cla;
+		this.clt = clt;
 		this.pts = pts;
-		this.gg = gg;
-		this.p = p;
-		this.n = n;
+		this.G = G;
+		this.P = P;
+		this.N = N;
 		this.bp = bp;
 		this.bc = bc;
-		this.eval  = Math.random();
+		this.eval  = une_eval;
 	}
 
 	evaluer() {
@@ -17,7 +17,7 @@ class Equipe {
 	}
 
 	affichage() {
-		document.write("evaluation:" + " " + this.eval + "points:" + " " + this.pts )
+		console.log(this.clt + " " + this.nom + " " + this.pts + " "+ this.gg + " " + this.N + " " + this.P + " " + " " + this.bp + " " + this.bc);
 	}
 
 	mise_a_jour(un_bp,un_bc) {
